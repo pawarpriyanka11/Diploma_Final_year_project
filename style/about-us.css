@@ -1,0 +1,96 @@
+.about-us{
+    background-color:#424874;
+    width:100vw;
+    height:100vh;
+    display:grid;
+    justify-content:center;
+    align-items:center;
+    font-family:'Alegreya', serif;
+    margin-top:22px;
+}
+
+.about-us-header{
+    color:aliceblue;
+    font-weight:800;
+    font-size:56px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Alegreya', serif;
+}
+
+.about-us-contact{
+    font-weight:600;
+    display:flex;
+    gap:102px;
+    color:rgb(203, 200, 197);
+    justify-content:space-between;
+}
+.left-about-us-contact{
+    margin-left:22px;
+}
+
+.about-us-service-product{
+    display:grid;
+    column-gap:272px;
+    justify-content:center;
+    align-items:center;
+    grid-template-columns:400px 300px;
+    margin-left:152px;
+}
+.about-us-contact-us-logo{
+    display:flex;
+    justify-content:space-between;
+    font-size:33px;
+}
+.about-us-content-title{
+    font-size:23px;
+    font-weight:600;
+    color:rgb(203, 200, 197);
+}
+
+.about-us-item{
+    color:rgb(203, 200, 197);
+}
+
+@media screen and (min-width: 350px) and (max-width: 767px) {
+  
+    .about-us{
+        height:65em;
+    }
+    .about-us-header{  
+      font-size:32px;
+    }
+    .about-us-contact{
+        gap:20px;
+        display:grid;
+        grid-template-columns:90px 250px;
+        justify-content:center;
+    }
+    .about-us-content-title{
+     font-size:16px;
+
+    }
+
+    .left-about-us-contact{
+    margin-left:0px;
+    }
+    .right-about-us-contact{
+        display:grid;
+        gap:45px;
+    }
+    .about-us-service-product{
+        display:block;
+        margin-left:88px;
+   
+    }
+    .about-us-contact-us-logo{
+        font-size:18px;
+    }
+    .about-us-item{
+        font-size:16px;
+    }
+    .about-us-product{
+        margin-top:22px;
+    }
+}

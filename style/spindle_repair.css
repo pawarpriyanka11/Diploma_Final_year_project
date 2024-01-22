@@ -1,0 +1,263 @@
+.sub-title-div{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0px;
+    font-size:2em;
+    font-family:  'Alegreya', serif;
+
+}
+
+.sub-title-hidden{
+    border-bottom: 6px double #424874;
+    color:#424874;
+    opacity:0;
+            filter:blur(5px);
+            transform:translateX(-100%);
+            transition:all 2s;
+}
+.sub-title-show{
+    opacity:1;
+    filter:blur(0);
+    transform: translateX(0);
+}
+.sub-text{
+    font-size: 28px;
+    margin-left: 63px;
+   color:#424874;
+   transition:all 2s;
+}
+
+.service-item-div{
+    display:grid;
+    grid-template-rows: 400px 400px 400px;
+    grid-gap:100px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.service-item1-div-hidden{
+    display:grid;
+    grid-template-columns:400px 600px;
+    background-color:azure;
+    border-radius:2em;
+    opacity:0;
+            filter:blur(5px);
+            transform:translateX(-100%);
+            transition:all 2s;
+}
+.service-item1-div-show{
+    opacity:1;
+    filter:blur(0);
+    transform: translateX(0);
+}
+.service-item1-div-show:hover, .service-item2-div-show:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.service-item2-div-hidden
+{
+    display:grid;
+    grid-template-columns:600px 400px;
+    background-color:azure;
+    border-radius:2em;
+    opacity:0;
+            filter:blur(5px);  
+            transform:translateX(-100%);
+            transition:all 2s;
+
+}
+.service-item2-div-show{
+    opacity:1;
+    filter:blur(0);
+    transform: translateX(0);
+}
+
+.service-img-div{
+    width:400px;
+}
+.service-img{
+    width:400px;
+}
+
+.service-title-div{
+   margin-top:42px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.service-title{
+    text-align:center;
+    color:#424874;
+    font-weight:600;
+    font-size:2em;
+    font-style: 'Inclusive Sans', sans-serif;
+}
+.service-info-div{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-left:83px;
+    text-align:left;
+    color:darkcyan;
+    font-style: 'Inclusive Sans', sans-serif;
+}
+.item-list-parent-div{
+    grid-template-rows: 400px;
+}
+.item-list-div{
+    font-family:'Alegreya', serif;
+    line-height:52px;
+   margin-left:10em;
+   color:darkcyan;
+   font-weight:600;
+}
+.item-list-div-hidden{
+    display:flex;
+    justify-content:right;
+    filter:blur(5px);
+    transform:translateX(-100%);
+    transition:all 2s;
+}
+.item-list-div-show{
+opacity:1;
+filter:blur(0);
+transform: translateX(0);
+}
+
+.cnc_mbm_img{
+    width:100%;
+    height:500px;
+}
+.MPM2-img{
+    width:470px;   
+    height:500px; 
+    margin-left:326px;
+}
+.cnc_mpm_img{
+    width:100%;
+    height:600px;
+}
+.RCM_info{
+    font-size:24px;
+    color:#39417c;
+    padding:50px 50px 50px 50px;
+    text-align: justify;
+}
+.rcm2-img{
+    width:400px;
+}
+.rcm_img{
+    display: block;
+    height:560px;
+    margin: auto;
+}
+
+/*Styleing for product page*/
+
+.product-img{
+    width:100%;
+   margin-top:103px;
+}
+.spindle-img{
+        width:100%;
+   margin-top:80px;
+   mix-blend-mode:multiply;
+}
+.product-sub-text{
+    font-size: 42px;
+    font-weight:700;
+    margin-left: 63px;
+   color:#424874;
+   transition:all 2s;
+}
+
+
+
+
+
+@media screen and (min-width: 350px) and (max-width: 767px) {
+  
+    .sub-text{
+        font-size:22px;
+        margin-left:12px;
+    }
+  
+    .service-item-div{
+    display:grid;
+    grid-template-rows:25em 25em 25em;
+  }
+  .service-item1-div-hidden{
+    display:grid;
+    grid-template-columns:50px 300px;
+    grid-gap:40px;
+    align-items:center;
+    justify-content:center;
+    
+  }
+  .service-img{
+    width:150px;
+    margin-left:0px;
+  }
+  .service-item2-div-hidden{
+    display:grid;
+    grid-template-columns:300px 50px;
+    grid-gap:4px;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+  }
+  .service-img-div{
+    width: 150px;
+    position:absolute;
+    right:0px;
+  }
+ .service-info-div2{
+    margin-left:0px;
+    width:155px;
+ }
+
+ .sub-title-2{
+    font-size:23px;
+ }
+ .cnc_mpm_img{
+    height:260px;
+ }
+ .item-list-parent-div{
+    grid-template-rows: 400px;
+}
+ .item-list-div-hidden{
+    flex-direction:column;
+ }
+ .item-list-div{
+    margin-left:100px;
+ }
+ .item-list-div2{
+    margin:0px;
+ }
+ .MPM2-img {
+    width:100%;   
+    height:500px; 
+    margin-left:0px;
+}
+.cnc_mbm_img{
+    width:100%;
+    height:20em;
+}
+
+.RCM_info{
+    font-size:17px;
+    color:#7f89d6;
+    padding:50px 0px 50px 50px;
+    text-align: justify;
+}
+.rcm2-img{
+    display:none;
+}
+.rcm_img{
+    width:100%;
+    height:265px;
+    
+}
+
+}
