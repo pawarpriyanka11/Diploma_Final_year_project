@@ -14,7 +14,7 @@ if(isset($_POST['enquiry_btn']))
 
     //Verifying Phno
 
-      $Ph_pattern = '/^\d{10}$/';
+      $Ph_pattern = '/^\+\d{1,4}\d{10}$/';
       $email_pattern = '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/';
 
       if ((preg_match($Ph_pattern, $_phone)) &&(preg_match($email_pattern, $_email)) ) {

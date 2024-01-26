@@ -1,6 +1,7 @@
 <?php
   session_start();
   include("includes/header.php");
+  include("../config/dbcon.php");
   ?>
 
 <?php
@@ -37,34 +38,75 @@
 <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 <div class="card">
 <div class="card-header p-3 pt-2">
-<div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-<i class="material-icons opacity-10">weekend</i>
+<div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
+<i class="material-icons opacity-10">person</i>
 </div>
+
 <div class="text-end pt-1">
-<p class="text-sm mb-0 text-capitalize">Today's Money</p>
-<h4 class="mb-0">$53k</h4>
+<p class="text-sm mb-0 text-capitalize">Total Enquires</p>
+<?php
+$enqury_count_query = "SELECT COUNT(*) AS total_rows FROM enquiry";
+$query_run = mysqli_query($conn,$enqury_count_query);
+if ($query_run) {
+  // Fetch the result as an associative array
+  $row = $query_run->fetch_assoc();
+  if($row['total_rows']>0){
+    ?>
+    <h4 class="mb-0"><?= $row['total_rows'];?></h4>
+    <?php
+  }
+  else{
+    ?>
+    <h4 class="mb-0">No Enquiry</h4>
+    <?php
+  }
+?>
+
+<?php
+}
+?>
 </div>
 </div>
 <hr class="dark horizontal my-0">
 <div class="card-footer p-3">
-<p class="mb-0"><span class="text-success text-sm font-weight-bolder">+55% </span>than last week</p>
+<a href="enquires.php"><p class="mb-0"><span class="text-success text-sm font-weight-bolder">click here to check</span></p></a>
 </div>
 </div>
 </div>
 <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
 <div class="card">
 <div class="card-header p-3 pt-2">
-<div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
-<i class="material-icons opacity-10">person</i>
+<div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+<i class="material-icons opacity-10">weekend</i>
 </div>
 <div class="text-end pt-1">
-<p class="text-sm mb-0 text-capitalize">Today's Users</p>
-<h4 class="mb-0">2,300</h4>
+<p class="text-sm mb-0 text-capitalize">All Products</p>
+<?php
+$enqury_count_query = "SELECT COUNT(*) AS total_rows FROM add_product";
+$query_run = mysqli_query($conn,$enqury_count_query);
+if ($query_run) {
+  // Fetch the result as an associative array
+  $row = $query_run->fetch_assoc();
+  if($row['total_rows']>0){
+    ?>
+    <h4 class="mb-0"><?= $row['total_rows'];?></h4>
+    <?php
+  }
+  else{
+    ?>
+    <h4 class="mb-0">No Product</h4>
+    <?php
+  }
+?>
+
+<?php
+}
+?>
 </div>
 </div>
 <hr class="dark horizontal my-0">
 <div class="card-footer p-3">
-<p class="mb-0"><span class="text-success text-sm font-weight-bolder">+3% </span>than last month</p>
+<a href="product.php"><p class="mb-0"><span class="text-success text-sm font-weight-bolder">click here to check</span></p></a>
 </div>
 </div>
 </div>
@@ -105,5 +147,14 @@
 </div>
         </div>
     </div>
+    </div>
 </div>
+<div class="c">
+        <h1 style="color: #424874;">To-Do List</h1>
+        <form id="taskForm">
+            <input type="text" id="taskInput" placeholder="Add a new task" required>
+            <button type="button" onclick="addTask()">Add</button>
+        </form>
+        <ul id="taskList"></ul>
+    </div>
 <?php include("includes/footer.php");?>

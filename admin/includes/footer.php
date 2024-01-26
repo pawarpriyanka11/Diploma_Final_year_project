@@ -46,6 +46,85 @@
   ?>
 
   </script>
+  <!--Todo list JS-->
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    displayTasks();
+});
+
+function displayTasks() {
+    const taskList = document.getElementById("taskList");
+    taskList.innerHTML = "";
+
+    // Fetch tasks from storage
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    tasks.forEach(function (task, index) {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            <span>${task}</span>
+            <span class="delete-btn" onclick="deleteTask(${index})">&#10006;</span>
+            <span class="update-btn" onclick="updateTask(${index})">&#9998;</span>
+        `;
+        taskList.appendChild(li);
+    });
+}
+
+function addTask() {
+    const taskInput = document.getElementById("taskInput");
+    const task = taskInput.value.trim();
+
+    if (task !== "") {
+        // Fetch tasks from storage
+        const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+        // Add new task
+        tasks.push(task);
+
+        // Save tasks to storage
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+
+        // Display tasks
+        displayTasks();
+
+        // Clear input field
+        taskInput.value = "";
+    }
+}
+
+function deleteTask(index) {
+    // Fetch tasks from storage
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    // Remove the task at the specified index
+    tasks.splice(index, 1);
+
+    // Save tasks to storage
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+
+    // Display tasks
+    displayTasks();
+}
+
+function updateTask(index) {
+    // Fetch tasks from storage
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    // Prompt user for the updated task
+    const updatedTask = prompt("Update task:", tasks[index]);
+
+    if (updatedTask !== null) {
+        // Update the task at the specified index
+        tasks[index] = updatedTask;
+
+        // Save tasks to storage
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+
+        // Display tasks
+        displayTasks();
+    }
+}
+    </script>
 </body>
 
 </html>

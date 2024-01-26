@@ -67,7 +67,7 @@
             </div>
         </div>
         <div class="enquire-div">
-        <a class="enquiry-link" href="equire/equiry_form.html">Enquiry</a>
+        <a class="enquiry-link" href="equire/equiry_form.php">Enquiry</a>
         </div>
 </div>
 
@@ -93,7 +93,7 @@
         <div class="product-info-div"><?= $item['description']; ?>
         </div>
        <div class="enquire-div">
-        <a class="enquiry-link" href="equire/equiry_form.html">Enquiry</a>
+        <a class="enquiry-link" href="equire/equiry_form.php">Enquiry</a>
         </div>
        </div>
      </div>
@@ -119,7 +119,7 @@
         Used for: CNC Routing Machine
        </div>
        <div class="enquire-div">
-        <a class="enquiry-link" href="equire/equiry_form.html">Enquiry</a>
+        <a class="enquiry-link" href="equire/equiry_form.php">Enquiry</a>
         </div>
        </div>
      </div>
@@ -134,7 +134,7 @@
 
       </div>
       <div class="enquire-div">
-       <a class="enquiry-link" href="equire/equiry_form.html">Enquiry</a>
+       <a class="enquiry-link" href="equire/equiry_form.php">Enquiry</a>
        </div>
       </div>
     </div>
