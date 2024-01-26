@@ -21,7 +21,6 @@
   <body onload="ss(-1);">
    <?php 
    include('user-view/navbar.php');
-   include('functions/userfunctions.php');
 
    ?>
     
@@ -75,10 +74,11 @@
 <!--Product section-->
 <div>
   <div class="title-div">
-    <h1 class="title-hidden">Products</h1>
+    <h1 class="title-hidden">Products</h1> 
     </div>
   <div class="product-item-div">
     <?php
+       include('functions/userfunctions.php');
       $product = getAllitem("add_product");
       if(mysqli_num_rows($product)>0)
       {
@@ -103,6 +103,7 @@
     ?>
     
 </div>
+
 <!--div>
   <div class="title-div">
     <h1 class="title-hidden">Products</h1>

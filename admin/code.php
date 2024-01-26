@@ -98,4 +98,19 @@ session_start();
       redirect("product.php","Something wnet wrong..");
     }
   }
+  else if(isset($_POST['delete_enquiry_btn'])){
+    $enquiry_id = mysqli_real_escape_string($conn,$_POST['enquiry_id']);
+    $enquiry_query = "SELECT * FROM enquiry WHERE id='$enquiry_id'";
+    $enquiry_query_run = mysqli_query($conn,$enquiry_query);
+    $enquiry_data = mysqli_fetch_array($enquiry_query_run);
+    $delete_query = "DELETE FROM enquiry WHERE id='$enquiry_id' ";
+    $delete_query_run = mysqli_query($conn,$delete_query);
+
+    if($delete_query_run){
+      redirect("enquires.php","Enquiry deleted Successfully..");
+    }
+    else{
+      redirect("enquires.php","Something went wrong..");
+    }
+  }
 ?>

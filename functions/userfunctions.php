@@ -1,8 +1,5 @@
 <?php 
-
-session_start();
 include('config/dbcon.php');
-
 function getAllitem($table){
     global $conn;
    $query = "SELECT * FROM $table";

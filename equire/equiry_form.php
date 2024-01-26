@@ -1,12 +1,16 @@
 <html>
     <head>
         <title>Enquiry Now</title>
-        <link rel="stylesheet" href="..\..\style\navigation.css">
-        <link rel="stylesheet" href="..\..\style\about-us.css">
-        <link rel="stylesheet" href="..\..\style\general.css">
-        <link rel="stylesheet" href="..\..\style\home.css">
-        <link rel="stylesheet" href="..\..\style\spindle_repair.css">
-        <link rel="stylesheet" href="..\..\style\enquiry.css">
+        <link rel="stylesheet" href="..\style\navigation.css">
+        <link rel="stylesheet" href="..\style\about-us.css">
+        <link rel="stylesheet" href="..\style\general.css">
+        <link rel="stylesheet" href="..\style\home.css">
+        <link rel="stylesheet" href="..\style\spindle_repair.css">
+        <link rel="stylesheet" href="..\style\enquiry.css">
+
+         <!--Alertify Js-->
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -32,7 +36,7 @@
 
            <div class="nav">
             <div class="left-div">
-       <a href="xyz"> <img class="logo-img" src="..\..\cnc-logo.png"></a>  
+       <a href="xyz"> <img class="logo-img" src="..\cnc-logo.png"></a>  
             </div>
           
             <div class="mid-div">
@@ -83,7 +87,9 @@
               <div class="text">
                  Contact us Form
               </div>
-              <form action="https://formsubmit.co/cncrahane1976@gmail.com" method="POST">
+              <!--form action="https://formsubmit.co/cncrahane1976@gmail.com" method="POST"-->
+               <!--form action="https://formsubmit.co/yesitslight@gmail.com" method="POST"-->
+              <form action="../functions/authcode.php" method="POST">
                  <div class="form-row">
                     <div class="input-data">
                        <input type="text" required name="First_Name">
@@ -103,7 +109,7 @@
                        <label for="">Email Address</label>
                     </div>
                     <div class="input-data">
-                       <input type="text" name="Phone_no" required>
+                       <input type="text" id="ph_no" name="Phone_no" required>
                        <div class="underline"></div>
                        <label for="">Phone no.</label>
                     </div>
@@ -129,13 +135,14 @@
                     <div class="form-row submit-btn">
                       <div class="input-data">
                          <div class="inner"></div>
-                         <input type="submit" value="submit">
+                         <input type="submit" name="enquiry_btn" value="submit">
                       </div>
                       
                    </div>
               
                 
               </form>
+               <!--/form-->
               </div>
             </div>
           
@@ -144,4 +151,19 @@
     <script src="../script.js">
 
     </script>
+    <!--Alertify JS-->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+<script>
+   <?php
+   session_start();
+  if(isset($_SESSION['msg'])){ ?>
+   
+   alertify.set('notifier','position', 'bottom-right');
+   alertify.success(<?= $_SESSION['msg']?>);
+   <?php
+      unset($_SESSION['msg']);
+   }
+   ?>
+ 
+   </script>
 </html>
