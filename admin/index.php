@@ -149,12 +149,5 @@ if ($query_run) {
     </div>
     </div>
 </div>
-<div class="c">
-        <h1 style="color: #424874;">To-Do List</h1>
-        <form id="taskForm">
-            <input type="text" id="taskInput" placeholder="Add a new task" required>
-            <button type="button" onclick="addTask()">Add</button>
-        </form>
-        <ul id="taskList"></ul>
-    </div>
+
 <?php include("includes/footer.php");?>

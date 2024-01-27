@@ -78,8 +78,10 @@
     </div>
   <div class="product-item-div">
     <?php
-       include('functions/userfunctions.php');
-      $product = getAllitem("add_product");
+       include('config/dbcon.php');
+       $query = "SELECT * FROM add_product";
+             
+      $product = $query_run = mysqli_query($conn,$query);
       if(mysqli_num_rows($product)>0)
       {
         foreach($product as $item){
