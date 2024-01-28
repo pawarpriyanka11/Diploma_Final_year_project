@@ -22,8 +22,6 @@
    <!--Alertify Js-->
    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
-   <!--to do list css -->
-   <link rel="stylesheet" href="../assets/css/todolist.css">
   <style>
      .form-control{
       border: 1px solid #b3a1a1 !important;
@@ -32,14 +30,12 @@
    </style> 
 
    <!--Chatbot-->
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-            <!-- <link rel="stylesheet" href="../assets/css/livechat.css"> -->
-
-
-            <title>Chatbot</title>
-            <!-- <script src="script.js" defer></script> -->
+        
             <script src="https://cdn.jsdelivr.net/npm/typo-js@1.1.6/dist/typo.min.js"></script>
+            <link rel="stylesheet" href="assets/css/livechat.css">
+        
+        <link rel="stylesheet" href="assets/css/calender.css">
 </head>
 
 

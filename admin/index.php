@@ -213,15 +213,5 @@ if (isset($_SESSION['adminLogin']) && isset($_SESSION['admin'])) {
         </div>
     </div>
         </div>
-
-
-
-
-
-        <script src="assets/js/livechat.js"></script>
-        <link rel="stylesheet" href="assets/css/livechat.css">
-        <script src="assets/js/calender.js"></script>
-        <link rel="stylesheet" href="assets/css/calender.css">
-
-
+                
         <?php include("includes/footer.php"); ?>
