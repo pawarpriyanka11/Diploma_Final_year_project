@@ -125,10 +125,6 @@ function updateTask(index) {
     }
 }
     </script>
-
-    <!--CHATBOT and Calender-->
-    <script src="assets/js/livechat.js"></script>
-<script src="assets/js/calender.js"></script>
 </body>
 
 </html>

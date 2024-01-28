@@ -231,7 +231,6 @@ const createChatLi = (message, className) => {
 };
 
 const generateResponse = () => {
-  
   const companyKeywords = [
 
     {keywords:["cnc machine","cncmachine"],response:"A CNC (Computer Numerical Control) machine is a computer-controlled manufacturing tool used for precision shaping, cutting, and machining of materials like metal, plastic, and wood."}, 
@@ -261,7 +260,7 @@ const generateResponse = () => {
     {keywords:["price","prices"],response:" Visit 'Our Products' to know more.."},
 
    
-{keywords:["location"],response:" Office 1: SHREE APARTMENT, NEHRU GARDEN, LOKRUCHINAGAR, RAHATA, DIST. AHMEDNAGAR-423107;<br> Office 2:4311, STREET NO. 9, AJITNAGAR, GANDHINAGAR, DELHI-110031"},
+{keywords:["location"],response:" Office 1: SHREE APARTMENT, NEHRU GARDEN, LOKRUCHINAGAR, RAHATA, DIST. AHMEDNAGAR-423107; Office 2:4311, STREET NO. 9, AJITNAGAR, GANDHINAGAR, DELHI-110031"},
   ];
   const userWords = userMessage.toLowerCase().split(" ").map(word => word.trim());
 
@@ -283,9 +282,7 @@ const generateResponse = () => {
   }
 
   // Default response for minimal questions
-return `<div class="defaultResponse">I'm sorry, I couldn't find information related to your question.<br>If you have a specific inquiry or need assistance, feel free to provide more details, and I'll do my best to help!<br><br><li><button value="Flagship product features?" onclick="data(this)">Flagship product features?</button></li><br><li><button value="Services you offer?" onclick="data(this)">Services you offer?</button></li>
-<li><button value="Best contact method?" onclick="data(this)">Best contact method?</button></li></div>`;
-  
+  return "I'm sorry, I couldn't find information related to your question. If you have a specific inquiry or need assistance, feel free to provide more details, and I'll do my best to help!";
 };
 
 
@@ -306,8 +303,7 @@ const handleChat = () => {
     chatbox.appendChild(incomingChatLi);
 
     const response = generateResponse();
-    // incomingChatLi.querySelector("p").textContent = response;
-    incomingChatLi.querySelector("p").innerHTML= response;
+    incomingChatLi.querySelector("p").textContent = response;
 
     if (response === "I have added an Enquiry button below. Click it to open the enquiry form.") {
       const enquiryLi = createEnquiryButton(); // Use the new function
@@ -346,17 +342,3 @@ chatbotToggler.addEventListener("click", () =>
 );
 
 
-
-function data(obj) {
-  // Assuming chatInput is the textarea where the user types
-  const chatInput = document.querySelector(".chat-input textarea");
-
-  // Get the value attribute of the clicked link
-  const linkValue = obj.getAttribute("value");
-
-  // Append the link value to the user's input
-  chatInput.value += ` ${linkValue}`;
-
-  // Optionally, you can focus on the input after adding the link
-  chatInput.focus();
-}

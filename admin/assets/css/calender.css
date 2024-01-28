@@ -21,10 +21,6 @@ body {
    width: 30px;
    
 }
-#calendar td.current-date {
-    background-color: #ad72bb;
-    color:#11033f;
-}
 
 #calendar {
     border-collapse: collapse;

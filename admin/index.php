@@ -157,31 +157,49 @@ if (isset($_SESSION['adminLogin']) && isset($_SESSION['admin'])) {
           <!-- calender -->
           <div class="col-md-12">
             <div class="row mt-4">
-              
+              <!DOCTYPE html>
+              <html lang="en">
+
+              <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <!-- <link rel="stylesheet" href="styles.css"> -->
+                <title>Interactive Calendar</title>
+              </head>
+
+              <body style>
                 <div id="calendar-container" style="width: 50%;">
-                  <button id="prev-month" style="height: 30px;
-                                                  font-size: 11px;
-                                                  font-weight: bold;
-                                                  padding: 0px 12px 0px 12px;
-                                                  background-color:#ffbe68;
-                                                  margin-top:12px;"
-    >Previous Month</button><button id="next-month" style="height: 30px;
-                                                  font-size: 11px;
-                                                  font-weight: bold;
-                                                  padding: 0px 12px 0px 12px;
-                                                  background-color:#ffbe68;
-                                                  margin-top:12px;"
-    
-    >Next Month</button>
+                  <button id="prev-month">Previous Month</button><button id="next-month">Next Month</button>
                   <h2 id="current-month-year"></h2>
                   <div id="calendar"></div>
                 </div>
                 <script src="script.js"></script>
+              </body>
+
+              </html>
 
             </div>
           </div>
           <!-- chatbot -->
-            <!--div class="chatbot" style="width:39%; height:58%">
+          <!DOCTYPE html>
+          <html lang="en">
+
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- <link rel="stylesheet" href="style.css"> -->
+            <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+            <!-- <link rel="stylesheet" href="../assets/css/livechat.css"> -->
+
+
+            <title>Chatbot</title>
+            <!-- <script src="script.js" defer></script> -->
+            <script src="https://cdn.jsdelivr.net/npm/typo-js@1.1.6/dist/typo.min.js"></script>
+
+          </head>
+
+          <body>
+            <div class="chatbot" style="width:39%; height:58%">
               <header>
                 <h2>Livechat</h2>
                 <span class="close-btn material-symbols-outlined">close</span>
@@ -196,22 +214,21 @@ if (isset($_SESSION['adminLogin']) && isset($_SESSION['admin'])) {
                 <textarea placeholder="Enter a message..." required></textarea>
                 <span id="send-btn" class="material-symbols-outlined">send</span>
               </div>
-            </div-->
-    <div class="chatbot" style="width:39%; height:58%">
-        <header>
-            <h2>Chatbot</h2>
-        </header>
-        <ul class="chatbox">
-            <li class="chat incoming">
-                <span class="material-symbols-outlined">Smart_toy</span>
-                <p id="myParagraph">Hi there &#x1F44B <br> How can I help you today?</p>
-            
-        </ul>
-        <div class="chat-input">
-            <textarea placeholder="Enter a message..." required></textarea>
-            <span id="send-btn" class="material-symbols-outlined">send</span>
+            </div>
+
+          </body>
+
+          </html>
         </div>
-    </div>
-        </div>
-                
+
+
+
+
+
+        <script src="assets/js/livechat.js"></script>
+        <link rel="stylesheet" href="assets/css/livechat.css">
+        <script src="assets/js/calender.js"></script>
+        <link rel="stylesheet" href="assets/css/calender.css">
+
+
         <?php include("includes/footer.php"); ?>
