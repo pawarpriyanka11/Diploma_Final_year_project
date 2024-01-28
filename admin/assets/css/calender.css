@@ -1,0 +1,80 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    align-items: center;
+    justify-content: center;
+    /* height: 10%; */
+    margin: 0;
+    position: fixed;
+    height: 10px;
+}
+
+#calendar-container {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0 20px 30px 20px;
+    justify-content: center;
+   align-items: center;
+   text-align: center; 
+   width: 30px;
+   
+}
+#calendar td.current-date {
+    background-color: #ad72bb;
+    color:#11033f;
+}
+
+#calendar {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#calendar th, #calendar td {
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 4px; /* Adjusted padding for cells */
+}
+
+#calendar th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #6f58a3;
+    
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    margin: 3px 5px;
+    cursor: pointer;
+    padding: 8px 8px;
+    font-size: 8px;
+    background-color: #dd63d5;
+    border-radius: 8px;
+    outline: none;
+    transition: background-color 0.3s;
+    display: inline-block;
+
+}
+button:hover {
+    background-color: #45a049;
+}
+
+#current-month-year {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #1c032d;
+    /* display: flex; */
+    justify-content: space-between; 
+}
+
+#calendar td:hover {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+

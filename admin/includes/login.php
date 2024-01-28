@@ -23,7 +23,7 @@ if (isset($_SESSION['alert'])) {
          Login
       </div>
       <form action="..\..\functions/authcode.php" method="POST">
-         <div class="login_img"><img src="../assets/img/download.png"></div>
+         <div class="login_img"><img src="../assets/img/login.png"></div>
          <div class="form-row">
             <div class="input-data">
                <input type="email" name="Email" required>
@@ -45,7 +45,6 @@ if (isset($_SESSION['alert'])) {
                      <div class="inner"></div>
                      <input type="submit" name="login_btn" value="login">
                   </div>
-
                </div>
 
       </form>

@@ -1,4 +1,4 @@
-const chatInput = document.querySelector(".chat-input textarea");
+    const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 const chatbox = document.querySelector(".chatbox");
 const chatbotToggler = document.querySelector(".chatbot-toggler");
@@ -78,8 +78,7 @@ const generateResponse = () => {
   }
 
   // Default response for minimal questions
-return `<div class="defaultResponse">I'm sorry, I couldn't find information related to your question.<br>If you have a specific inquiry or need assistance, feel free to provide more details, and I'll do my best to help!<br><br><li><button value="Flagship product features?" onclick="data(this)">Flagship product features?</button></li><br><li><button value="Services you offer?" onclick="data(this)">Services you offer?</button></li>
-<li><button value="Best contact method?" onclick="data(this)">Best contact method?</button></li></div>`;
+return `I'm sorry, I couldn't find information related to your question.<br>If you have a specific inquiry or need assistance, feel free to provide more details, and I'll do my best to help!`;
   
 };
 

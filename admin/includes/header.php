@@ -30,6 +30,16 @@
       padding:8px 10px;
      }
    </style> 
+
+   <!--Chatbot-->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+            <!-- <link rel="stylesheet" href="../assets/css/livechat.css"> -->
+
+
+            <title>Chatbot</title>
+            <!-- <script src="script.js" defer></script> -->
+            <script src="https://cdn.jsdelivr.net/npm/typo-js@1.1.6/dist/typo.min.js"></script>
 </head>
 
 

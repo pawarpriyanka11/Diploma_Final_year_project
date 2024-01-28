@@ -202,6 +202,7 @@ function smoothScroll(targetId){
 }
 
 //CHATBOT
+
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 const chatbox = document.querySelector(".chatbox");
@@ -343,6 +344,8 @@ chatbotCloseBtn.addEventListener("click", () =>
 chatbotToggler.addEventListener("click", () =>
   document.body.classList.toggle("show-chatbot")
 );
+
+
 
 function data(obj) {
   // Assuming chatInput is the textarea where the user types
