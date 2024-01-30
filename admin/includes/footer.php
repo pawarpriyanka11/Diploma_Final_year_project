@@ -12,16 +12,16 @@
         <div class="col-lg-6">
           <ul class="nav nav-footer justify-content-center justify-content-lg-end">
             <li class="nav-item">
-              <a href="#cnclink" class="nav-link pe-0 text-muted" target="_blank">About Us</a>
+              <a href="http://localhost/diploma_Final_year_project/#aboutus" class="nav-link pe-0 text-muted" target="_blank">About Us</a>
             </li>
             <li class="nav-item">
-              <a href="#cnclink" class="nav-link pe-0 text-muted" target="_blank">Contact Us</a>
+              <a href="http://localhost/diploma_Final_year_project/#contact-us" class="nav-link pe-0 text-muted" target="_blank">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a href="#cnclink" class="nav-link pe-0 text-muted" target="_blank">Our Product</a>
+              <a href="http://localhost/diploma_Final_year_project/" class="nav-link pe-0 text-muted" target="_blank">Our Product</a>
             </li>
             <li class="nav-item">
-              <a href="#cnclink" class="nav-link pe-0 text-muted" target="_blank">Our Services</a>
+              <a href="http://localhost/diploma_Final_year_project/" class="nav-link pe-0 text-muted" target="_blank">Our Services</a>
             </li>
           </ul>
         </div>

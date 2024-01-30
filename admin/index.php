@@ -123,17 +123,37 @@ if (isset($_SESSION['adminLogin']) && isset($_SESSION['admin'])) {
                 <i class="material-icons opacity-10">person</i>
               </div>
               <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">New Clients</p>
-                <h4 class="mb-0">3,462</h4>
+                <p class="text-sm mb-0 text-capitalize">Add Products</p>
+                <?php
+                $enqury_count_query = "SELECT COUNT(*) AS total_rows FROM add_product";
+                $query_run = mysqli_query($conn, $enqury_count_query);
+                if ($query_run) {
+                  // Fetch the result as an associative array
+                  $row = $query_run->fetch_assoc();
+                  if ($row['total_rows'] > 0) {
+                ?>
+                    <h4 class="mb-0"><?= $row['total_rows']; ?></h4>
+                  <?php
+                  } else {
+                  ?>
+                    <h4 class="mb-0">No Product</h4>
+                  <?php
+                  }
+                  ?>
+
+                <?php
+                }
+                ?>
               </div>
             </div>
             <hr class="dark horizontal my-0">
             <div class="card-footer p-3">
-              <p class="mb-0"><span class="text-danger text-sm font-weight-bolder">-2%</span> than yesterday</p>
+            <a href="add_product.php">
+                <p class="mb-0"><span class="text-success text-sm font-weight-bolder">click here to check</span></p>
+              </a>
             </div>
           </div>
         </div>
-
         <!-- card4 -->
         <div class="col-xl-3 col-sm-6">
           <div class="card">
@@ -142,16 +162,17 @@ if (isset($_SESSION['adminLogin']) && isset($_SESSION['admin'])) {
                 <i class="material-icons opacity-10">weekend</i>
               </div>
               <div class="text-end pt-1">
-                <p class="text-sm mb-0 text-capitalize">Sales</p>
-                <h4 class="mb-0">$103,430</h4>
+                <p class="text-sm mb-0 text-capitalize">Concept N Controls</p>
+                <h4 class="mb-0">.</h4>
               </div>
             </div>
             <hr class="dark horizontal my-0">
             <div class="card-footer p-3">
-              <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+5% </span>than yesterday</p>
+              <p class="mb-0"><span class="text-success text-sm font-weight-bolder">visit </span></p>
             </div>
           </div>
         </div>
+
         <!-- caleneder and chatbot -->
         <div class="row">
           <!-- calender -->
@@ -173,62 +194,34 @@ if (isset($_SESSION['adminLogin']) && isset($_SESSION['admin'])) {
                   <h2 id="current-month-year"></h2>
                   <div id="calendar"></div>
                 </div>
-                <script src="script.js"></script>
+      
               </body>
 
               </html>
-
+ <!-- To-Do List -->
+ <div class="col-md-6">
+                <h2>To-Do List</h2>
+                <div class="input-group mb-3">
+                    <input type="text" id="task-input" class="form-control" placeholder="Add a new task" aria-label="Add a new task" aria-describedby="add-task-btn">
+                    <button class="btn btn-success" type="button" id="add-task-btn">Add Task</button>
+                </div>
+                <ul id="todo-list" class="list-group">
+                    <!-- To-Do items will be dynamically added here -->
+                </ul>
+             
             </div>
+            </div>
+
+  </div>
           </div>
-          <!-- chatbot -->
-          <!DOCTYPE html>
-          <html lang="en">
-
-          <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <!-- <link rel="stylesheet" href="style.css"> -->
-            <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-            <!-- <link rel="stylesheet" href="../assets/css/livechat.css"> -->
-
-
-            <title>Chatbot</title>
-            <!-- <script src="script.js" defer></script> -->
-            <script src="https://cdn.jsdelivr.net/npm/typo-js@1.1.6/dist/typo.min.js"></script>
-
-          </head>
-
-          <body>
-            <div class="chatbot" style="width:39%; height:58%">
-              <header>
-                <h2>Livechat</h2>
-                <span class="close-btn material-symbols-outlined">close</span>
-              </header>
-              <ul class="chatbox">
-                <li class="chat incoming">
-                  <span class="material-symbols-outlined">Smart_toy</span>
-                  <p id="myParagraph">Hi there &#x1F44B <br> How can I help you today?</p>
-
-              </ul>
-              <div class="chat-input">
-                <textarea placeholder="Enter a message..." required></textarea>
-                <span id="send-btn" class="material-symbols-outlined">send</span>
-              </div>
-            </div>
-
-          </body>
-
-          </html>
-        </div>
-
-
-
-
-
+          
+ 
         <script src="assets/js/livechat.js"></script>
         <link rel="stylesheet" href="assets/css/livechat.css">
         <script src="assets/js/calender.js"></script>
         <link rel="stylesheet" href="assets/css/calender.css">
+        <script src="assets/js/todolist.js"></script>
+        <link rel="stylesheet" href="assets/css/todolist.css">
 
 
         <?php include("includes/footer.php"); ?>
