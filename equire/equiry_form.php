@@ -51,7 +51,7 @@
            
           
           <ul class="menu-ul">
-             <li><a class="menu-item" href="../index.html">Home</a></li> 
+             <li><a class="menu-item" href="../index.php">Home</a></li> 
              <li class="services">
                 <a class="menu-item">Our Services</a>
                 <ul class="service-drop-down-menu">
@@ -86,9 +86,8 @@
               <div class="text">
                  Contact us Form
               </div>
-              <!--form action="https://formsubmit.co/cncrahane1976@gmail.com" method="POST"-->
-               <!--form action="https://formsubmit.co/yesitslight@gmail.com" method="POST"-->
-              <form action="../functions/authcode.php" method="POST">
+            
+              <form action="../functions/authcode.php" method="POST" id="form">
                  <div class="form-row">
                     <div class="input-data">
                        <input type="text" required name="First_Name">
@@ -103,7 +102,7 @@
                  </div>
                  <div class="form-row">
                     <div class="input-data">
-                       <input type="email" name="Email" required>
+                       <input type="email" id="email" name="Email" required>
                        <div class="underline"></div>
                        <label for="">Email Address</label>
                     </div>
@@ -138,10 +137,7 @@
                       </div>
                       
                    </div>
-              
-                
-              </form>
-               <!--/form-->
+               </form>
               </div>
             </div>
           
@@ -150,6 +146,7 @@
     <script src="../script.js">
 
     </script>
+   
     <!--Alertify JS-->
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 <script>

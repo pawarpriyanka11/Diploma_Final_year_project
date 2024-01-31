@@ -360,3 +360,4 @@ function data(obj) {
   // Optionally, you can focus on the input after adding the link
   chatInput.focus();
 }
+  
