@@ -55,12 +55,12 @@
              <li class="services">
                 <a class="menu-item">Our Services</a>
                 <ul class="service-drop-down-menu">
-                  <li class="service-list"><a class="service-list-link special-link" href="spindle_repair.html" >Spindle Repair</a></li>
-                  <li class="service-list"><a class="service-list-link special-link" href="Ball_Screw_Repair.html"> Ball Screw Repair</a></li>
-                  <li class="service-list"><a class="service-list-link special-link" href="Servo_Motors_and_Drive_Repair.html">Servo Motors and Drive Repair</a></li>
-                  <li class="service-list"><a class="service-list-link special-link" href="cnc_machine_prevention_maintenance.html">CNC Machine Preventive Maintenance</a></li>
-                  <li class="service-list"><a class="service-list-link special-link" href="cnc_machine-breakdown-maintenance.html">CNC Machine Breakdown Maintenance</a></li>
-                  <li class="service-list"><a class="service-list-link special-link" href="retrofitting_of_cnc_machine.html">Retrofitting of CNC Machine</a></li>
+                  <li class="service-list"><a class="service-list-link special-link" href="../services/service_list/spindle_repair.html" >Spindle Repair</a></li>
+                  <li class="service-list"><a class="service-list-link special-link" href="../services/service_list/Ball_Screw_Repair.html"> Ball Screw Repair</a></li>
+                  <li class="service-list"><a class="service-list-link special-link" href="../services/service_list/Servo_Motors_and_Drive_Repair.html">Servo Motors and Drive Repair</a></li>
+                  <li class="service-list"><a class="service-list-link special-link" href="../services/service_list/cnc_machine_prevention_maintenance.html">CNC Machine Preventive Maintenance</a></li>
+                  <li class="service-list"><a class="service-list-link special-link" href="../services/service_list/cnc_machine-breakdown-maintenance.html">CNC Machine Breakdown Maintenance</a></li>
+                  <li class="service-list"><a class="service-list-link special-link" href="../services/service_list/retrofitting_of_cnc_machine.html">Retrofitting of CNC Machine</a></li>
                  </ul>
             </li>
             <li class="products">
@@ -68,10 +68,9 @@
               <ul class="product-drop-down-menu">
                 <li class="product-list"><a class="service-list-link special-link"href="../products/cnc_drilling_and_routing_machine.html">CNC Drilling and Routing Machine</a></li>
                 <li class="product-list"><a class="service-list-link special-link" href="../products/spindles.html">Spindles</a></li>
-                <li class="product-list"><a class="service-list-link special-link">Collets</a></li>
-                <li class="product-list"><a class="service-list-link special-link">Tool Station</a></li>
-                <li class="product-list"><a class="service-list-link special-link">Servo Motors and Drives</a></li>
-                <li class="product-list"><a class="service-list-link special-link">Linear Guide</a></li>
+                <li class="product-list"><a class="service-list-link special-link" href="../products/toolstation.html">Tool Station</a></li>
+                <li class="product-list"><a class="service-list-link special-link" href="../products/Servo_Motors_and_Driver.html">Servo Motors and Drives</a></li>
+                <li class="product-list"><a class="service-list-link special-link" href="../products/Linear_Guide.html">Linear Guide</a></li>
                </ul>
             </li>  
              <li><a class="menu-item">Contact Us</a></li> 
