@@ -27,9 +27,9 @@
                 <h4>Enquires</h4>
             </div>
             <div class="card-body">
-                <table class="table table-bordered table-striped">
+                <table class="table table-bordered table-striped" >
                     <thead>
-                        <tr>
+                        <tr style="color:black">
                             <th>ID</th>
                             <th>First Name</th>
                             <th>Last Name</th>
