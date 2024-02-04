@@ -21,11 +21,40 @@ if(isset($_POST['enquiry_btn']))
 
     $insert_query = "INSERT INTO enquiry (first_name,last_name,email,phone,address,company_name,msg) VALUES ('$_f_name','$_l_name','$_email','$_phone','$_address','$_c_name','$_msg')";
     $insert_run = mysqli_query($conn,$insert_query);
-
+    
     if($insert_run){
-      echo '<script>alert("Form Submitted Successfully..");
-          window.location.href = "../equire/equiry_form.php";
-          </script>';
+      echo '<script>
+      window.alert("Form Submitted Successfully..");
+      window.location.replace("../equire/equiry_form.php");
+</script>';
+          $html="<table><tr><td>First Name</td><td>$_f_name</td></tr><tr><td>Last Name</td><td>$_l_name</td></tr><tr><td>Email</td><td>$_email</td></tr><tr><td>Phone</td><td>$_phone</td></tr><tr><td>Address</td><td>$_address</td></tr><tr><td>Company</td><td>$_c_name</td></tr><tr><td>Message</td><td>$_msg</td></tr></table>";
+	
+	include('../smtp/PHPMailerAutoload.php');
+	$mail=new PHPMailer(true);
+	$mail->isSMTP();
+	$mail->Host="smtp.gmail.com";
+	$mail->Port=587;
+	$mail->SMTPSecure="tls";
+	$mail->SMTPAuth=true;
+	$mail->Username="yesitslight@gmail.com";
+	$mail->Password="iwjf ryic wocb ukhk";
+	$mail->SetFrom("yesitslight@gmail.com");
+	$mail->addAddress("yesitslight@gmail.com");
+	$mail->IsHTML(true);
+	$mail->Subject="New Enquiry";
+	$mail->Body=$html;
+	$mail->SMTPOptions=array('ssl'=>array(
+		'verify_peer'=>false,
+		'verify_peer_name'=>false,
+		'allow_self_signed'=>false
+	));
+	if ($mail->send()) {
+   
+
+} else {
+    echo '<script>alert("Error: ' . $mail->ErrorInfo . '"); window.location.href = "../equire/equiry_form.php";</script>';
+}
+
     }
     else
     {
@@ -38,20 +67,6 @@ if(isset($_POST['enquiry_btn']))
           window.location.href = "../equire/equiry_form.php";
           </script>';
       }
-
-    /*  //Send data to email
-    $to = "ayushirahane2021@gmail.com";
-    $subject = "New Form Submission";
-    $email_msg ="First Name: $_f_name \nLast Name: $_l_name \nEmail: $_email \nPhone no: $_phone \nAddress: $_address \nCompany Name: $_c_name \nMessage: $_msg";
-    echo $email_msg;
-    if(mail($to,$subject,$email_msg)){
-      echo"Done";
-    }
-    else{
-      echo"error";
-    }*/
-    
-
   }
   else if(isset($_POST['login_btn'])){
     $email = mysqli_real_escape_string($conn,$_POST['Email']);
