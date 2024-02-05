@@ -91,6 +91,7 @@ entries.forEach((entry) => {
 const contactus_hiddenElements = document.querySelectorAll('.contact-us-div-hidden');
 contactus_hiddenElements.forEach((el) => contactus_observer.observe(el));
 
+\
 //Scrooling animation for Spindle Repair page -Service Title
 const spindle_repair_observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
